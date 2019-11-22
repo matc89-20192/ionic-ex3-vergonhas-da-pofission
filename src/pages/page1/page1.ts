@@ -73,4 +73,14 @@ export class Page1 {
     return validTask;
   }
 
+  taskSelected(task) {
+    for (let i = 0; i < this.taskList.length; i++) {
+      if (this.taskList[i] == task) {
+        this.taskList.splice(i, 1);
+
+        this.isTaskListEmpty = this.taskList.length ? false : true;
+      }
+    }
+  }
+
 }
