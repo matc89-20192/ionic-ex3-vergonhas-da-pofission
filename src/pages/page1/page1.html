@@ -15,11 +15,11 @@
     <ion-input type="number" [(ngModel)]="new_priority" id="editPrioridade"></ion-input>
   </ion-item>
 
-  <button ion-button (click)="removeTask()" id ="buttonRemover" [disabled]="isTaskListEmpty">Remover 1º</button>
+  <button ion-button (click)="removeTask()" id="buttonRemover" [disabled]="isTaskListEmpty">Remover 1º</button>
 
-  <button ion-button (click)="addTask()" id ="buttonAdicionar">Adicionar</button>
+  <button ion-button (click)="addTask()" id="buttonAdicionar">Adicionar</button>
 
-  <ion-list>
+  <ion-list id="listView">
     <button ion-item *ngFor="let task of taskList" (click)="taskSelected(task)">
       {{ task.description }}
 
